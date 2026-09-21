@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container { padding: 15px; border: 1px solid gray; }
+        .highlight { background: yellow; border: 3px solid red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div id="targetDiv" class="container">Original DOM Element</div>
+    <button id="btnAction">Trigger DOM Manipulation</button>
+    <script>
+        document.getElementById('btnAction').onclick = function() {
+            let tgt = document.getElementById('targetDiv');
+            tgt.innerText = "DOM manipulation triggered successfully!";
+            tgt.className = "container highlight";
+            tgt.setAttribute("data-updated", "true");
+        };
+    </script>
+</body>
+</html>
